@@ -7,63 +7,37 @@
     <title>KaGi</title>
 </head>
 <style>
-    .grid-container {display: grid; grid-template-columns: 50px 50px 50px 50px;
-            grid-gap: 5px;grid-template-rows: 35px 35px 35px 35px 35px 35px;}
-            input {grid-column: 1 / span 4;}
-            button   {width: 100%; border: none; 
-                background-color: rgb(241, 235, 235); border-radius: 4px;} 
-                .orangered {grid-column: 1 / span 2; background-color: orangered;color: white;} 
-                .blue {background-color: blue;color: white;}
-                .orange {background-color: orange;}
-                .green {background-color: green;}
-                .black {background-color: black;color: white;}
+    
 </style>
 <body>
-        
     <header>
         <h1>KaGi Kalkulator Luas dan Keliling Persegi</h1>
         <h4>Selamat Datang di Kalkulator Luas dan Keliling Persegi</h4>
         <p>Web ini digunakan untuk menghitung luas dan keliling persegi dalam rangka menyelesaikan mini project Software Engineering by RevoU</p>
     </header>
-
-    <h1 style="color:green;"> Ini Kalkulator </h1>
-    
-            <div class="grid-container">
-            <input  id="display" name="display" class="input">
-    
-        
-            <button class="orangered" class="btn btn-ac" value="AC" onclick="btnClick(this.innerText)">AC</button>
-            <button class="blue" class="btn" value="C" onclick="btnClick(this.innerText)">C</button>
-            <button class="orange" class="btn" value="*" onclick="btnClick(this.innerText)">*</button>
-        
-            <button class="btn" value="7" onclick="btnClick(this.innerText)">7</button>
-            <button class="btn" value="8" onclick="btnClick(this.innerText)">8</button>
-            <button class="btn" value="9" onclick="btnClick(this.innerText)">9</button>
-            <button class="orange" class="btn" value="/" onclick="btnClick(this.innerText)">/</button>
-    
-            <button class="btn" value="4" onclick="btnClick(this.innerText)">4</button>
-            <button class="btn" value="5" onclick="btnClick(this.innerText)">5</button>
-            <button class="btn" value="6" onclick="btnClick(this.innerText)">6</button>
-            <button class="orange" class="btn" value="+" onclick="btnClick(this.innerText)">+</button>
-    
-            <button class="btn" value="1" onclick="btnClick(this.innerText)">1</button>
-            <button class="btn" value="2" onclick="btnClick(this.innerText)">2</button>
-            <button class="btn" value="3" onclick="btnClick(this.innerText)">3</button>
-            <button class="orange" class="btn" value="-" onclick="btnClick(this.innerText)">-</button>
-            <button class="black" class="btn" value="+-" onclick="btnClick(this.innerText)">+-</button>
-            <button class="btn" value="0" onclick="btnClick(this.innerText)">0</button>
-            <button class="black" class="btn" value="." onclick="btnClick(this.innerText)">.</button>
-            <button class="green" class="btn" value="=" onclick="btnClick(this.innerText)">=</button>
+ <div>
+    <img src="https://4.bp.blogspot.com/-IYE_GGt5Q_8/UOxL9pQvvNI/AAAAAAAAFPA/ZZfdDJDIPxE/s1600/persegi.png" alt="persegi" class="center">
         </div>
 
     <div class="inputSection">
-        <label for="squareSide" id="lblSquareSide">Hitung Luas Persegi</label>
-        <input type="number" id="squareSide">
+        <p>Rumus Luas dan Keliling Persegi Yaitu</p>
+        <p class="rumusluas">L = S x S</p>     
+        <p class="rumuskeliling">K = 4 x S</p>
+
+        <p>Keterangan:
+            L = Luas
+            K = Keliling
+            S = Sisi
+        </p>
+
+        <script src="index.js"></script>
+        <p>Masukkan Sisi <input type="text" id="s"></p>
+        <div class="button">
+            <button id="countButton" value="Hitung" onclick="luas()">Hitung Luas persegi</button> 
+            <p>Hasil Luas = <span id="luas"></span></p>
+            <button id="countButton" value="Hitung" onclick="kel()">Hitung Keliling persegi</button>
+            <p>Hasil Keliling = <span id="kel"></span></p>
+        </div>    
     </div>
-    <div class="button">
-        <button id="countButton">Hitung</button>
-        <button id="resetButton">Reset</button>
-    </div>
-    <script src="./JS/index.js"></script>
 </body>
 </html>
